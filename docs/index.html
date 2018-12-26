@@ -1,12 +1,312 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br"> 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+
+    <title>Niinoo - Code</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Niramit" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles/estilo.css">
 </head>
+
 <body>
-    <h1>Index</h1>
+
+    <header class="topo">
+        <div class="container row">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Logo Site" class="logo-img">
+            </div>
+            <span class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </span>
+            <nav class="menu">
+                <ul>
+                    <li><a class="ativo" href="#intro">Home</a></li>
+                    <li><a href="#sectionSobre">Sobre</a></li>
+                    <li><a href="#portifolio">Portifolio</a></li>
+                    <li><a href="#skill">Skill</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="home-intro" id="intro">
+        <div class="container row">
+            <span>
+                <h1 class="home-intro-titulo">Anderson Lopes</h1>
+                <p class="home-intro-frase">Desenvolvedor Web</p>
+            </span>
+        </div>
+    </section>
+
+    <section class="container section-sobre js-ancora" id="sectionSobre">
+        <header>
+            <h2 class="section-sobreTitulo"><a href="sobre.html">Sobre</a></h2>
+            <p class="section-sobreFrase">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias quis quia facere iste repellendus unde
+                voluptas neque asperiores dolores, ut ex laborum
+            </p>
+        </header>
+        <div class="sobre-area">
+            <div class="js-carrosselContainer">
+                <div class="js-carrosselControl left">
+                    < </div> <div class="js-carrosselControl right"> >
+                </div>
+
+                <div class="js-carrosselContent">
+                    <div class="js-carrosselRail">
+                        <div class="js-carrosselItem">
+                            <div class="section-sobreCard">
+                                <div class="section-sobreIcone">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div>
+                                    <h3>Titulo card</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum numquam
+                                        consequuntur
+                                        expedita ea </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="js-carrosselItem">
+                            <div class="section-sobreCard">
+                                <div class="section-sobreIcone">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div>
+                                    <h3>Titulo card</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum numquam
+                                        consequuntur
+                                        expedita ea </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="categorias js-ancora" id="categorias">
+        <div class="container">
+            <div class="col-s-4 categoria-card onepage">
+                <div class="categoria-texto">
+                    <h3>Titulo Categoria</h3>
+                    <p>descrição da categoria item do card</p>
+                    <a class="categoria-demo" href="">Ver Demo</a>
+                </div>
+                <img class="categoria-img" src="assets/images/thumb-site.png" alt="">
+                <span class="categoria-verMais">Saber mais</span>
+            </div>
+            <div class="col-s-4 categoria-card onepage">
+                <div class="categoria-texto">
+                    <h3>Titulo Categoria</h3>
+                    <p>descrição da categoria item do card</p>
+                    <a class="categoria-demo" href="">Ver Demo</a>
+                </div>
+                <img class="categoria-img" src="assets/images/thumb-site.png" alt="">
+                <span class="categoria-verMais">Saber mais</span>
+            </div>
+            <div class="col-s-4 categoria-card onepage">
+                <div class="categoria-texto">
+                    <h3>Titulo Categoria</h3>
+                    <p>descrição da categoria item do card</p>
+                    <a class="categoria-demo" href="">Ver Demo</a>
+                </div>
+                <img class="categoria-img" src="assets/images/thumb-site.png" alt="">
+                <span class="categoria-verMais">Saber mais</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="container portifolio" id="portifolio">
+        <header>
+            <h2 class="portifolio-titulo">Portifolio</h2>
+        </header>
+
+        <div class="portifolio-container">
+            <ul class="tab-lista">
+                <li class="tab-item ativo">Todos</li>
+                <li class="tab-item">Onepage</li>
+                <li class="tab-item">Site</li>
+                <li class="tab-item">Blog</li>
+            </ul>
+            <div class="row">
+                <div class="col-6 col-s-3 portifolio-item" data-tab="onepage">
+                    <img class="portifolio-img" src="assets/images/thumb-site.png" alt="">
+                    <div class="portifolio-texto">
+                        <h2>Onepage</h2>
+                        <ul>
+                            <li>HTML</li>
+                            <li>SCSS</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-6 col-s-3 portifolio-item" data-tab="blog">
+                    <img class="portifolio-img" src="assets/images/thumb-site.png" alt="">
+                    <div class="portifolio-texto">
+                        <h2>Blog</h2>
+                        <ul>
+                            <li>HTML</li>
+                            <li>SCSS</li>
+                            <li>PHP</li>
+                            <li>Wordpress</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-6 col-s-3 portifolio-item" data-tab="onepage">
+                    <img class="portifolio-img" src="assets/images/thumb-site.png" alt="">
+                </div>
+                <div class="col-6 col-s-3 portifolio-item" data-tab="site">
+                    <img class="portifolio-img" src="assets/images/thumb-site.png" alt="">
+                </div>
+                <div class="col-6 col-s-3 portifolio-item" data-tab="site">
+                    <img class="portifolio-img" src="assets/images/thumb-site.png" alt="">
+                </div>
+                <div class="col-6 col-s-3 portifolio-item" data-tab="blog">
+                    <img class="portifolio-img" src="assets/images/thumb-site.png" alt="">
+                </div>
+                <div class="col-6 col-s-3 portifolio-item" data-tab="blog">
+                    <img class="portifolio-img" src="assets/images/thumb-site.png" alt="">
+                </div>
+                <div class="col-6 col-s-3 portifolio-item" data-tab="blog">
+                    <img class="portifolio-img" src="assets/images/thumb-site.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <section class="modal-container">
+            <article class="modal-content"> 
+                <header class="modal-header">
+                    <h2 class="modal-titulo">Titulo</h2>
+                    <span class="modal-btnClose">x</span>
+                </header>
+                <section class="modal-body row-s">
+                    <div>
+                        <img src="" alt="">
+                    </div>
+                    <div>
+                        <ul></ul>
+                    </div> 
+                </section>
+            </article>
+        </section>
+
+    </section>
+
+    <section class=" escreva-me">
+        <div class="container row">
+            <div class="escreva-texto">
+                <h2>Escreva-me uma mensagem.</h2>
+                <p>
+                    Duvidas? Sujestoes?, me escreva vamos discutir e trocas boas idéas,<br> sempre bom fazermos manter
+                    network atualiado.
+                </p>
+            </div>
+            <div class="escreva-btn">
+                <a href="#">Enviar Mensagem</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container blog" id="blog">
+        <header>
+            <h2 class="blog-titulo">Blog</h2>
+        </header>
+        <div class="row-s">
+            <div class="col-s-6 col-m-8 col-l-6 blog-post">
+                <div>
+                    <!-- a imagem do post tem de ter tamanhos "250 x 75%" -->
+                    <img src="assets/images/thumb-site.png" alt="">
+                </div>
+                <div>
+                    <h3 class="blog-post_Titulo">Titulo do post</h3>
+                    <span class="blog-post_By"><b>Por</b>Anderson Lopes </span>
+                    <span class="blog-post_Tag">CSS3</span>
+                    <p class="blog-post_Texto">
+                        assunto do passunto do passunto do passunto do passunto do passunto do post
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-s-6 col-m-8 col-l-6 blog-post">
+                <div>
+                    <!-- a imagem do post tem de ter tamanhos "250 x 75%" -->
+                    <img src="assets/images/thumb-site.png" alt="">
+                </div>
+                <div>
+                    <h3 class="blog-post_Titulo">Titulo do post</h3>
+                    <span class="blog-post_By"><b>Por</b>Anderson Lopes </span>
+                    <span class="blog-post_Tag">CSS3</span>
+                    <p class="blog-post_Texto">
+                        assunto do passunto do passunto do passunto do passunto do passunto do post
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-s-6 col-m-8 col-l-6 blog-post">
+                <div>
+                    <!-- a imagem do post tem de ter tamanhos "250 x 75%" -->
+                    <img src="assets/images/thumb-site.png" alt="">
+                </div>
+                <div>
+                    <h3 class="blog-post_Titulo">Titulo do post</h3>
+                    <span class="blog-post_By"><b>Por</b>Anderson Lopes </span>
+                    <span class="blog-post_Tag">CSS3</span>
+                    <p class="blog-post_Texto">
+                        assunto do passunto do passunto do passunto do passunto do passunto do post
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="col-s-6 col-m-8 col-l-6 blog-post">
+                <div>
+                    <!-- a imagem do post tem de ter tamanhos "250 x 75%" -->
+                    <img src="assets/images/thumb-site.png" alt="">
+                </div>
+                <div>
+                    <h3 class="blog-post_Titulo">Titulo do post</h3>
+                    <span class="blog-post_By"><b>Por</b>Anderson Lopes </span>
+                    <span class="blog-post_Tag">CSS3</span>
+                    <p class="blog-post_Texto">
+                        assunto do passunto do passunto do passunto do passunto do passunto do post
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <br><br><br><br><br><br>
+
+    <footer id="contato">
+        <div class="container row">
+            <div class="col-s-5">
+                <h3>titulo</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. s vitae a.</p>
+            </div>
+            <div class="col-6 col-s-4">
+                <h3>titulo</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. s vitae a.</p>
+            </div>
+            <div class="col-6 col-s-3">
+                social
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/main.js"></script>
 </body>
+
 </html>

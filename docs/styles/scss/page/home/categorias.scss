@@ -1,0 +1,100 @@
+/* categorias */
+.categorias{ 
+    background: rgba(0, 0, 0, 1);
+    background: linear-gradient(160deg, black 0%, rgba(77, 77, 255, 0.5) 30%, black 50%,rgba(77, 77, 255, 0.5) 70%, black 100%);
+    padding: 30px 0;
+    overflow-x: auto;
+    @include MediaQueryMin(M){
+        padding: 60px 0;
+    } 
+    @include MediaQueryMin(L){
+        padding: 120px 0;
+    } 
+}
+.categorias .container{
+    display: flex;
+    @include MediaQueryMax(S){
+        width: max-content;
+    }    
+    @include MediaQueryMin(S){
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+.categoria-card{ 
+    padding: 0 4px;
+    position: relative; 
+    @include MediaQueryMax(S){
+        margin: 28px 0;
+        width: 100vw;
+    } 
+}
+.categoria-card.ativo .categoria-texto{
+    visibility: visible;
+    opacity: 1;
+}
+@keyframes vemCaixa{
+    0%{opacity: 0;}
+    80%{opacity: 0.5;}
+    100%{opacity: 1;}
+}
+.categoria-img{ 
+    display: block;
+    border: none;
+    width: 100%;  
+}
+.categoria-texto{
+    position: absolute;
+    top: 0;
+    right: 4px;
+    bottom: 36px;
+    left: 4px;
+
+    color: #fff;
+    background: rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0 0 50px 5px rgba(0, 0, 0, 0.75);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    transition-duration: 0.6s;
+    visibility: collapse;
+    opacity: 0;
+     
+}  
+.categoria-verMais {
+    font-size: 0.875em; // 14px
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    padding: 8px 0;
+    cursor: pointer;
+    background: linear-gradient(40deg,rgba(0, 0, 0, 1) 0%, rgba(77, 77, 777, 0.5) 50%, rgba(0, 0, 0, 1) 100%);
+    color: #fff;
+} 
+.categoria-verMais.ativo { 
+    background: linear-gradient(40deg,rgba(0, 0, 0, 1) 0%, rgba(77, 77, 777, 0.9) 50%, rgba(0, 0, 0, 1) 100%);
+}
+.categoria-texto h3{ 
+    font-size: 1em; // 18px
+}
+.categoria-texto p{
+    font-size: 0.875em; // 14px
+    color: rgba(255, 255, 255, 0.85); 
+}
+.categoria-demo {
+    display: inline-block;
+    padding: 6px 13px;
+    margin-top: 48px;
+    color: #fff;
+    border: 1px solid #fff;
+    transition-duration: 0.33s;
+    position: absolute;
+    bottom: 30px;
+}
+.categoria-demo:hover {
+    background-color: rgba(255,255,255,.15);
+    color: #fff;
+}

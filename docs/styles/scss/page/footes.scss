@@ -1,0 +1,8 @@
+footer{
+    background: rgba(70,90,115,1);
+    padding: 50px 0;
+    @include MediaQueryMax(S){
+        padding: 20px 0;
+        height: calc(100vh - 50px);
+    }
+}

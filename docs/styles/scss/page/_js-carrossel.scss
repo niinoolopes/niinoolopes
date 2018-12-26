@@ -1,0 +1,53 @@
+.js-carrosselContainer{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.js-carrosselRail{
+    width: max-content;
+    display: flex;
+    transition-duration: .66s;
+}
+@media (min-width: 576px){ 
+    .js-carrosselRail{
+        width: auto; 
+    }
+}
+// .js-carrosselItem{  
+//     box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.10);
+// }
+.js-carrosselControl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 25px;
+    padding: 6px 0;
+    position: absolute; 
+    font-family: monospace;
+    font-size: 20px;
+    border-radius: 3px;
+    // color: #fff;
+    background: linear-gradient( rgba(0, 0, 0, 0.1) , rgba(0, 0, 0, 0.1));
+    cursor: pointer;
+    transition-duration: .33s;
+}
+@media (min-width: 576px){
+    .js-carrosselControl {
+        display: none;
+    }
+}
+.js-carrosselControl.left{
+    left: 3px;
+}
+.js-carrosselControl.left:hover,
+.js-carrosselControl.left:visited {
+    background: linear-gradient(100deg, rgba(0, 0, 0, .3)0% , rgba(0, 0, 0, .1)70%);
+}
+.js-carrosselControl.right{
+    right: 3px;
+}
+.js-carrosselControl.right:hover,
+.js-carrosselControl.right:visited {
+    background: linear-gradient(100deg, rgba(0, 0, 0, .1)30% , rgba(0, 0, 0, .3)100%);
+}
