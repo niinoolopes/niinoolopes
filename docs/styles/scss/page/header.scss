@@ -1,0 +1,141 @@
+header.topo{
+    padding: 4px 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    transition-duration: 0.33s;
+    background: #f9faff;
+    @include MediaQueryMax(M){
+        position: fixed;  
+        box-shadow: 0 0px 8px 0 rgb(100,100,100); 
+    }
+}
+header.topo.header_fixed{
+    @include MediaQueryMin(M){
+        position: fixed; 
+        box-shadow: 0 0px 8px 0 rgb(100,100,100); 
+        animation: exibeMenu 0.5s;
+    }
+}
+@keyframes exibeMenu{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+header.topo.header_fixed .logo-img{  
+    max-height: 30px;
+}
+header.topo.header_fixed .menu li{  
+    height: unset;
+}
+header.topo.header_fixed .menu a{ 
+    transition-duration: 0s; 
+}
+.topo .row{
+    justify-content: space-between;
+    align-items: center; 
+}
+// logo
+.logo{
+    padding-left:  10px;
+}
+.logo-img{ 
+    max-height: 30px; 
+    display: block;
+    border: none;
+    @include MediaQueryMin(M){
+        max-height: 70px;
+    }
+} 
+// menu
+.menu-btn{
+    display: none;
+    font-size: 1.5em;
+    padding-right: 10px;
+    z-index: 6;
+    margin-left: auto;
+    @include MediaQueryMax(M){
+        display: block;
+    } 
+} 
+.menu-btn:active { 
+    animation: abreMenu 2s;
+}
+@keyframes abreMenu{
+    0%{ 
+        opacity: 0.50;} 
+    40%{
+        opacity: 0.75;} 
+    100%{
+        opacity: 1.00;}
+} 
+.menu{
+    padding-right: 10px;
+    @include MediaQueryMin(M){
+        padding-right: 0;
+    }
+}
+.menu ul{ 
+    opacity: 0;
+    transform: translate3d(110%,0,0);
+    position: fixed;  
+    transition: .40s;
+    
+    top: 38px;
+    right: 0; 
+    bottom: 0;
+    z-index: 5;
+    background: rgb(249, 250, 255);
+    @include MediaQueryMin(S){ 
+    }
+    @include MediaQueryMin(M){
+        opacity: 1;
+        transform: translate3d(0,0,0);
+        position: unset; 
+    }
+}
+.menu.ativo ul{
+    opacity: 1;
+    transform: translate3d(0,0,0);
+    box-shadow: 0 4px 8px 0 #646464;
+    transition: .33s;
+}
+.menu li{
+    display: block; 
+    min-width: 200px;
+    padding: 0 4px;
+    @include MediaQueryMin(M){
+        min-width: unset;
+        display: inline-block; 
+    }
+}
+.menu a{
+    display: block; 
+    transition: 0.33s; 
+    padding: 7px 0;
+    @include MediaQueryMin(S){
+        padding: 10px 0;
+    }
+    @include MediaQueryMin(M){
+        text-align: center;  
+    }
+}
+.menu a:after{
+        content: "";
+        display: block;
+        height: 2px;
+        width: 0;
+        transition-duration: 0.33s;
+}
+.menu a.ativo:after{
+    background: rgba(15, 20, 25, 1);
+    width: 100%;
+}
+.menu li:hover a:after{
+    background: rgba(15, 20, 25, 0.15);
+    width: 100%;
+}

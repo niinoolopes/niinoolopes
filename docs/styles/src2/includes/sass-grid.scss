@@ -1,0 +1,146 @@
+/* - GRID
+  update - > 09/2018
+  Anderson Lopes ->  niinoolopes0@gmail.com 
+  @niinoolopes0
+*/ 
+
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+
+
+// IMPORTANDO MIXIN
+@import 'sass-mixin';
+
+
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+
+
+// MIXIN PARA CONSTRUÇÃO DO GRID
+
+// Mixin para linhas
+@mixin mixin-row( $V ) {
+    margin-left: ( -$gutter / $V ) + px;
+    margin-right: ( -$gutter / $V ) + px;
+}
+// Mixin containers
+@mixin mixin-container( $P , $M ){
+    @if ($P!=0){
+        padding-left: ( $gutter / $P ) + px;
+        padding-right: ( $gutter / $P ) + px; 
+    }
+    @else if ($P=0){
+        padding-left: 0px;
+        padding-right: 0px; 
+    }
+    margin-left: $M;
+    margin-right: $M;
+}
+// Mixin colunas
+@mixin mixin-col ( $P ){ 
+    flex-grow: 1;
+    flex-basis: 0; 
+} 
+
+
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+// GERAIS
+/*todos os containers*/
+.container.row,
+.container.row-s,
+.container.row-m,
+.container.row-lg,
+.container.row-xg{
+    @include mixin-container( 0 , auto )
+}
+/*todas as linhas*/
+.row,
+.row-s,
+.row-m, 
+.row-lg, 
+.row-xg{
+    display: flex;
+    flex-wrap: wrap;
+    @include mixin-row(2);
+}
+/*todas as columns*/
+[class*=col]{ 
+    padding-left: ( $gutter / 2 ) + px;
+    padding-right: ( $gutter / 2 ) + px; 
+}
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+/* GRID*/
+    .container{  
+        @include mixin-container( 2 , auto )
+    }    
+    .col{
+        @include mixin-col(2)
+    }
+    @for $i from 1 through $colunas{
+        $width: ((100 / $colunas) * $i);
+        .col-#{$i} { 
+            width: $width + %;
+        }
+    }
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+/* GRID SMALL */
+@include MediaQueryMin(S){
+    .container{
+        max-width: $containerS;
+    }  
+    .col-s{
+        @include mixin-col(2)
+    } 
+    @for $i from 1 through $colunas{
+        $width: ((100 / $colunas) * $i);
+        .col-s-#{$i} { 
+            width: $width + %;
+        } 
+    }
+}
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+/* GRID MEDIO */
+@include MediaQueryMin(M){
+    .container{
+        max-width: $containerM;
+    } 
+    .col-m{
+        @include mixin-col(2)
+    } 
+    @for $i from 1 through $colunas{
+        $width: ((100 / $colunas) * $i);
+        .col-m-#{$i} { 
+            width: $width + %;
+        } 
+    }
+}
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+/* GRID LARGE */
+@include MediaQueryMin(L){
+    .container{
+        max-width: $containerL;
+    }
+    .col-lg{
+        @include mixin-col(2)
+    }
+    @for $i from 1 through $colunas{
+        $width: ((100 / $colunas) * $i);
+        .col-lg-#{$i} { 
+            width: $width + %; 
+        } 
+    }
+}
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+/* GRID X LARGE */
+@include MediaQueryMin(XL){
+    .container{
+        max-width: $containerXL;
+    }
+    .col-xl{
+        @include mixin-col(2)
+    }
+    @for $i from 1 through $colunas{
+        $width: ((100 / $colunas) * $i);
+        .col-xl-#{$i} { 
+            width: $width + %; 
+        } 
+    }
+}

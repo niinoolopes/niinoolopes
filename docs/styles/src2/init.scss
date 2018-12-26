@@ -1,0 +1,16 @@
+/* imports */
+/* @import 'caminho/arquivo'; */
+@import 'includes/reset';
+@import 'includes/sass-mixin';
+@import 'includes/grid';
+
+/* styles pages */
+@import 'pages/_footer';
+@import 'pages/_header';
+@import 'pages/_sidebar';
+@import 'pages/page';
+
+
+
+@import 'pages/home/_intro-texto'; 
+@import 'pages/home/_intro-accordion';

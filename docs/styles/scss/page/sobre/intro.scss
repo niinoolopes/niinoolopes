@@ -1,0 +1,15 @@
+.sobre-intro{ 
+    @include intro_background();
+}
+.sobre-intro .row{
+    @include intro_row(PAG);
+}
+.sobre-intro-titulo{
+    @include intro_titulo();
+}
+.sobre-intro-titulo:after{
+    @include intro_titulo_after();
+}
+.sobre-intro-frase{ 
+    @include intro_frase();
+}

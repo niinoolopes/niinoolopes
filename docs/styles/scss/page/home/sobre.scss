@@ -1,0 +1,53 @@
+.section-sobre{
+    @include padding_section();
+} 
+.section-sobre header{ 
+    @include header_section();
+}
+.section-sobreTitulo{
+    @include titulo_section();
+    @include margin_in_mobile(8);
+}
+.section-sobreTitulo a{
+    color: $cor_texto_01;
+    text-decoration: none;
+}
+.section-sobreFrase {
+    @include subTitulo_section();
+    @include margin_in_mobile(8);
+}
+.section-sobreCard{
+    transition: all .35s;
+    padding: 0 35px;
+    margin-bottom: 20px;
+    text-align: center; 
+    @include MediaQueryMin(M){
+        margin-bottom: unset;
+    }
+    @include MediaQueryMin(L){
+        padding: 0 20px;
+    }
+}
+.section-sobreIcone{
+    border: 1px solid rgba(77, 77, 255, 0.75);  
+    font-size: 1.25em; // 18px
+    max-width: 45px;
+    height: 45px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    @include MediaQueryMin(M){
+        margin: 20px auto;
+    }
+}
+.section-sobreCard h3{
+    line-height: 1; 
+    font-size: 1.125em; // 18px 
+}
+.section-sobreCard p{
+    line-height: 20px;
+    font-size: 0.875em; // 14px
+    color: rgba(0,0,0,.5);
+} 
+// ...

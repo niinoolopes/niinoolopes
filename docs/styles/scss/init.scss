@@ -1,0 +1,25 @@
+// GERAL
+@import 'geral/_reset';
+// LAYOUT
+@import 'layout/_grid';
+// MIXIN
+@import 'mixin/_mixin.scss';
+@import 'mixin/_mixin-estilos.scss';
+
+
+// PARTS
+@import 'page/header';
+@import 'page/footes';
+@import 'page/_js-carrossel';
+@import 'page/_js-modal';
+
+// PAGES
+@import 'page/home/intro';
+@import 'page/home/sobre';
+@import 'page/home/categorias';
+@import 'page/home/portifolio';
+@import 'page/home/blog';
+@import 'page/home/escreva-me';
+
+@import 'page/sobre/intro';
+@import 'page/sobre/main';

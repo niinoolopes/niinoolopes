@@ -1,0 +1,55 @@
+.portifolio{
+    @include padding_section();
+}
+.portifolio header{
+    @include header_section();
+}
+.portifolio-titulo{
+    @include titulo_section();
+}
+.portifolio-titulo:after{
+    // @include separador_titulo_section(325px);
+}
+.portifolio .row{
+    align-content: flex-start;
+
+    box-shadow: 0 1px 10px 1px rgba(0, 0, 0, .3);
+    overflow: hidden;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, .1);
+    height: 275px;
+    @include MediaQueryMin(L){
+        height: 440px;
+    }
+}
+// tabs
+.tab-lista {
+    display: flex;
+    justify-content: center;
+    margin: 12px auto;
+}
+.tab-item{
+    padding: 5px 10px;
+    color: rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+.tab-item.ativo{
+    color: rgba(0, 0, 0, 1);
+    font-weight: bold;
+}
+.portifolio-item{ 
+    padding: 4px;
+    transition-duration: .5s;
+}
+ 
+.portifolio-texto{
+    display: none;
+}
+.portifolio-img{
+    transition-duration: 0.5s;
+    display: block;
+    // margin: auto;
+    // box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.66);
+    margin: 0 auto;
+    border: none;
+}
