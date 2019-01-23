@@ -1,310 +1,330 @@
 <!DOCTYPE html>
-<html lang="pt-br"> 
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>Niinoo - Code</title>
-
-    <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Niramit" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-        crossorigin="anonymous">
-
+    <title>niiinoo | Github</title>
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif:400,400i,700|Megrim" rel="stylesheet">
+    <!-- MEU CSS -->
     <link rel="stylesheet" href="styles/estilo.css">
 </head>
 
 <body>
-
     <header class="topo">
         <div class="container row">
-            <div class="logo">
-                <img src="assets/images/logo.png" alt="Logo Site" class="logo-img">
+            <div class="col-2">
+                <a href="#intro">
+                    <img class="topo-logo" src="assets/images/logo-niinoo.png" alt="">
+                </a>
             </div>
-            <span class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </span>
-            <nav class="menu">
+            <div class="col-2">
+                <button class="topo-btn">
+                    <span class="btn-mobile"></span>
+                </button>
+            </div>
+            <nav class="topo-menu">
                 <ul>
-                    <li><a class="ativo" href="#intro">Home</a></li>
-                    <li><a href="#sectionSobre">Sobre</a></li>
-                    <li><a href="#portifolio">Portifolio</a></li>
+                    <li><a href="#intro">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#skill">Skill</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#portifolio">Portifolio</a></li>
+                    <li><a href="#contato">contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
-    <section class="home-intro" id="intro">
-        <div class="container row">
-            <span>
-                <h1 class="home-intro-titulo">Anderson Lopes</h1>
-                <p class="home-intro-frase">Desenvolvedor Web</p>
-            </span>
-        </div>
-    </section>
-
-    <section class="container section-sobre js-ancora" id="sectionSobre">
-        <header>
-            <h2 class="section-sobreTitulo"><a href="sobre.html">Sobre</a></h2>
-            <p class="section-sobreFrase">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias quis quia facere iste repellendus unde
-                voluptas neque asperiores dolores, ut ex laborum
-            </p>
-        </header>
-        <div class="sobre-area">
-            <div class="js-carrosselContainer">
-                <div class="js-carrosselControl left">
-                    < </div> <div class="js-carrosselControl right"> >
-                </div>
-
-                <div class="js-carrosselContent">
-                    <div class="js-carrosselRail">
-                        <div class="js-carrosselItem">
-                            <div class="section-sobreCard">
-                                <div class="section-sobreIcone">
-                                    <i class="fas fa-code"></i>
-                                </div>
-                                <div>
-                                    <h3>Titulo card</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum numquam
-                                        consequuntur
-                                        expedita ea </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="js-carrosselItem">
-                            <div class="section-sobreCard">
-                                <div class="section-sobreIcone">
-                                    <i class="fas fa-code"></i>
-                                </div>
-                                <div>
-                                    <h3>Titulo card</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum numquam
-                                        consequuntur
-                                        expedita ea </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+    <main>
+        <section class="container intro" id="intro">
+            <div>
+                <h1 class="intro-titulo"> Anderson Lopes </h1>
+                <p class="intro-frase">Desenvolvedor Web.</p>
             </div>
-        </div>
-    </section>
-
-    <section class="categorias js-ancora" id="categorias">
-        <div class="container">
-            <div class="col-s-4 categoria-card onepage">
-                <div class="categoria-texto">
-                    <h3>Titulo Categoria</h3>
-                    <p>descrição da categoria item do card</p>
-                    <a class="categoria-demo" href="">Ver Demo</a>
-                </div>
-                <img class="categoria-img" src="assets/images/thumb-site.png" alt="">
-                <span class="categoria-verMais">Saber mais</span>
-            </div>
-            <div class="col-s-4 categoria-card onepage">
-                <div class="categoria-texto">
-                    <h3>Titulo Categoria</h3>
-                    <p>descrição da categoria item do card</p>
-                    <a class="categoria-demo" href="">Ver Demo</a>
-                </div>
-                <img class="categoria-img" src="assets/images/thumb-site.png" alt="">
-                <span class="categoria-verMais">Saber mais</span>
-            </div>
-            <div class="col-s-4 categoria-card onepage">
-                <div class="categoria-texto">
-                    <h3>Titulo Categoria</h3>
-                    <p>descrição da categoria item do card</p>
-                    <a class="categoria-demo" href="">Ver Demo</a>
-                </div>
-                <img class="categoria-img" src="assets/images/thumb-site.png" alt="">
-                <span class="categoria-verMais">Saber mais</span>
-            </div>
-        </div>
-    </section>
-
-    <section class="container portifolio" id="portifolio">
-        <header>
-            <h2 class="portifolio-titulo">Portifolio</h2>
-        </header>
-
-        <div class="portifolio-container">
-            <ul class="tab-lista">
-                <li class="tab-item ativo">Todos</li>
-                <li class="tab-item">Onepage</li>
-                <li class="tab-item">Site</li>
-                <li class="tab-item">Blog</li>
-            </ul>
-            <div class="row">
-                <div class="col-6 col-s-3 portifolio-item" data-tab="onepage">
-                    <img class="portifolio-img" src="assets/images/thumb-site.png" alt="">
-                    <div class="portifolio-texto">
-                        <h2>Onepage</h2>
-                        <ul>
-                            <li>HTML</li>
-                            <li>SCSS</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-6 col-s-3 portifolio-item" data-tab="blog">
-                    <img class="portifolio-img" src="assets/images/thumb-site.png" alt="">
-                    <div class="portifolio-texto">
-                        <h2>Blog</h2>
-                        <ul>
-                            <li>HTML</li>
-                            <li>SCSS</li>
-                            <li>PHP</li>
-                            <li>Wordpress</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-6 col-s-3 portifolio-item" data-tab="onepage">
-                    <img class="portifolio-img" src="assets/images/thumb-site.png" alt="">
-                </div>
-                <div class="col-6 col-s-3 portifolio-item" data-tab="site">
-                    <img class="portifolio-img" src="assets/images/thumb-site.png" alt="">
-                </div>
-                <div class="col-6 col-s-3 portifolio-item" data-tab="site">
-                    <img class="portifolio-img" src="assets/images/thumb-site.png" alt="">
-                </div>
-                <div class="col-6 col-s-3 portifolio-item" data-tab="blog">
-                    <img class="portifolio-img" src="assets/images/thumb-site.png" alt="">
-                </div>
-                <div class="col-6 col-s-3 portifolio-item" data-tab="blog">
-                    <img class="portifolio-img" src="assets/images/thumb-site.png" alt="">
-                </div>
-                <div class="col-6 col-s-3 portifolio-item" data-tab="blog">
-                    <img class="portifolio-img" src="assets/images/thumb-site.png" alt="">
-                </div>
-            </div>
-        </div>
-
-        <section class="modal-container">
-            <article class="modal-content"> 
-                <header class="modal-header">
-                    <h2 class="modal-titulo">Titulo</h2>
-                    <span class="modal-btnClose">x</span>
-                </header>
-                <section class="modal-body row-s">
-                    <div>
-                        <img src="" alt="">
-                    </div>
-                    <div>
-                        <ul></ul>
-                    </div> 
-                </section>
-            </article>
         </section>
 
-    </section>
+        <section class="sobre container" id="sobre">
+            <header>
+                <h2 class="sobre-titulo">Sobre</h2>
+            </header> 
 
-    <section class=" escreva-me">
-        <div class="container row">
-            <div class="escreva-texto">
-                <h2>Escreva-me uma mensagem.</h2>
-                <p>
-                    Duvidas? Sujestoes?, me escreva vamos discutir e trocas boas idéas,<br> sempre bom fazermos manter
-                    network atualiado.
-                </p>
-            </div>
-            <div class="escreva-btn">
-                <a href="#">Enviar Mensagem</a>
-            </div>
-        </div>
-    </section>
+            <div class="container js-carrosselContainer">
+                <div class="js-carrosselControl left"> &lsaquo; </div>
+                <div class="js-carrosselControl right"> &rsaquo; </div>
 
-    <section class="container blog" id="blog">
-        <header>
-            <h2 class="blog-titulo">Blog</h2>
-        </header>
-        <div class="row-s">
-            <div class="col-s-6 col-m-8 col-l-6 blog-post">
-                <div>
-                    <!-- a imagem do post tem de ter tamanhos "250 x 75%" -->
-                    <img src="assets/images/thumb-site.png" alt="">
-                </div>
-                <div>
-                    <h3 class="blog-post_Titulo">Titulo do post</h3>
-                    <span class="blog-post_By"><b>Por</b>Anderson Lopes </span>
-                    <span class="blog-post_Tag">CSS3</span>
-                    <p class="blog-post_Texto">
-                        assunto do passunto do passunto do passunto do passunto do passunto do post
-                    </p>
-                </div>
-            </div>
+                <div class="js-carrosselContent">
 
-            <div class="col-s-6 col-m-8 col-l-6 blog-post">
-                <div>
-                    <!-- a imagem do post tem de ter tamanhos "250 x 75%" -->
-                    <img src="assets/images/thumb-site.png" alt="">
-                </div>
-                <div>
-                    <h3 class="blog-post_Titulo">Titulo do post</h3>
-                    <span class="blog-post_By"><b>Por</b>Anderson Lopes </span>
-                    <span class="blog-post_Tag">CSS3</span>
-                    <p class="blog-post_Texto">
-                        assunto do passunto do passunto do passunto do passunto do passunto do post
-                    </p>
-                </div>
-            </div>
+                    <div class="js-carrosselRail">
 
-            <div class="col-s-6 col-m-8 col-l-6 blog-post">
-                <div>
-                    <!-- a imagem do post tem de ter tamanhos "250 x 75%" -->
-                    <img src="assets/images/thumb-site.png" alt="">
-                </div>
-                <div>
-                    <h3 class="blog-post_Titulo">Titulo do post</h3>
-                    <span class="blog-post_By"><b>Por</b>Anderson Lopes </span>
-                    <span class="blog-post_Tag">CSS3</span>
-                    <p class="blog-post_Texto">
-                        assunto do passunto do passunto do passunto do passunto do passunto do post
-                    </p>
+                        <article class="js-carrosselItem">
+                            <div class="sobre-icone">
+                                <img src="assets/icone/chart-bar-regular.svg" alt="">
+                            </div>
+                            <header>
+                                <h3 class="subsobre-titulo">Analytic</h3>
+                            </header>
+                            <p class="sobre-descricao">
+                                Não basta ter apenas uma pagina na web, precisamos analisar o que o google analytics
+                                pode mostrar,
+                                com ele podemos monitorar o volume de visitas e interaçõs no site.
+                            </p>
+                        </article>
+
+                        <article class="js-carrosselItem">
+                            <div class="sobre-icone">
+                                <img src="assets/icone/chart-bar-regular.svg" alt="">
+                            </div>
+                            <header>
+                                <h3 class="subsobre-titulo">Analytic</h3>
+                            </header>
+                            <p class="sobre-descricao">
+                                Não basta ter apenas uma pagina na web, precisamos analisar o que o google analytics
+                                pode mostrar,
+                                com ele podemos monitorar o volume de visitas e interaçõs no site.
+                            </p>
+                        </article>
+
+                        <article class="js-carrosselItem">
+                            <div class="sobre-icone">
+                                <img src="assets/icone/chart-bar-regular.svg" alt="">
+                            </div>
+                            <header>
+                                <h3 class="subsobre-titulo">Analytic</h3>
+                            </header>
+                            <p class="sobre-descricao">
+                                Não basta ter apenas uma pagina na web, precisamos analisar o que o google analytics
+                                pode mostrar,
+                                com ele podemos monitorar o volume de visitas e interaçõs no site.
+                            </p>
+                        </article>
+
+                    </div>
                 </div>
             </div>
 
+        </section>
 
-            <div class="col-s-6 col-m-8 col-l-6 blog-post">
-                <div>
-                    <!-- a imagem do post tem de ter tamanhos "250 x 75%" -->
-                    <img src="assets/images/thumb-site.png" alt="">
+
+
+
+        <section class="frase container row">
+            <p class="frase-content">
+                Suas chances de sucesso aumentam ou diminuem na mesma proporção da sua confiança para dar o próximo
+                passo
+            </p>
+            <cite class="frase-citacao">By Anderson</cite>
+        </section>
+
+        <!-- <section class="referencia" id="referencia">
+            <header>
+                <h2 class="referencia-titulo">Referencias de estudos e leituras</h2>
+            </header>
+            <div class="referencia-content">
+                <div class="referencia-item right">
+                    <span class="referencia-itemData">data</span>
+                    <h3 class="referencia-itemTitulo">titulo</h3>
+                    <p class="referencia-itemDescricao">texto alternativo</p>
                 </div>
-                <div>
-                    <h3 class="blog-post_Titulo">Titulo do post</h3>
-                    <span class="blog-post_By"><b>Por</b>Anderson Lopes </span>
-                    <span class="blog-post_Tag">CSS3</span>
-                    <p class="blog-post_Texto">
-                        assunto do passunto do passunto do passunto do passunto do passunto do post
-                    </p>
+                <div class="referencia-item left">
+                    <span class="referencia-itemData">data</span>
+                    <h3 class="referencia-itemTitulo">titulo</h3>
+                    <p class="referencia-itemDescricao">texto alternativo</p>
+                </div>
+                <div class="referencia-item right">
+                    <span class="referencia-itemData">data</span>
+                    <h3 class="referencia-itemTitulo">titulo</h3>
+                    <p class="referencia-itemDescricao">texto alternativo</p>
+                </div>
+                <div class="referencia-item left">
+                    <span class="referencia-itemData">data</span>
+                    <h3 class="referencia-itemTitulo">titulo</h3>
+                    <p class="referencia-itemDescricao">texto alternativo</p>
+                </div>
+                <div class="referencia-item right">
+                    <span class="referencia-itemData">data</span>
+                    <h3 class="referencia-itemTitulo">titulo</h3>
+                    <p class="referencia-itemDescricao">texto alternativo</p>
+                </div>
+                <div class="referencia-item left">
+                    <span class="referencia-itemData">data</span>
+                    <h3 class="referencia-itemTitulo">titulo</h3>
+                    <p class="referencia-itemDescricao">texto alternativo</p>
+                </div>
+                <div class="referencia-item right">
+                    <span class="referencia-itemData">data</span>
+                    <h3 class="referencia-itemTitulo">titulo</h3>
+                    <p class="referencia-itemDescricao">texto alternativo</p>
+                </div>
+            </div>
+        </section> -->
+
+        <section class="section-skill container" id="skill">
+            <header>
+                <h2 class="skill-titulo">My Skills</h2>
+            </header>
+            <div class="row">
+                <div class="col-12 col-m-4">
+                    <div class="skill-item">
+                        <p class="skill-nome">HTML</p>
+                        <div class="skill-barra"> <span class="progress-bar"></span> </div>
+                        <span class="skill-num">90%</span>
+                    </div>
+                </div>
+                <div class="col-12 col-m-4">
+                    <div class="skill-item">
+                        <p class="skill-nome">CSS</p>
+                        <div class="skill-barra"> <span class="progress-bar"></span> </div>
+                        <span class="skill-num">90%</span>
+                    </div>
+                </div>
+                <div class="col-12 col-m-4">
+                    <div class="skill-item">
+                        <p class="skill-nome">JavaScript</p>
+                        <div class="skill-barra"> <span class="progress-bar"></span> </div>
+                        <span class="skill-num">90%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row-s col-s-10">
+                <nav class="skill-nav">
+                    <ul class="skill-menu">
+                        <li data-skill="item">HTML</li>
+                        <li data-skill="item">CSS3</li>
+                        <li data-skill="item">Bootstrap</li>
+                        <li data-skill="item">JavaScript</li>
+                        <li data-skill="item">Git</li>
+                        <li data-skill="item">NPM</li>
+                        <li data-skill="item">PHP</li>
+                        <li data-skill="item">SQL</li>
+                        <li data-skill="item">Wordpress</li>
+                        <li data-skill="item">CodeIgniter</li>
+                    </ul>
+                </nav>
+                <div class="skill-items">
+                    <article data-skill="texto" class="ativo">
+                        <p>
+                            1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro quibusdam nulla
+                            deserunt excepturi, laudantium harum laboriosam impedit earum voluptate eaque minima
+                            quisquam veniam sed libero. Mollitia deserunt dolor vel!
+                        </p>
+                        <p>
+                            1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro quibusdam nulla
+                            deserunt excepturi, laudantium harum laboriosam impedit earum voluptate eaque minima
+                            quisquam veniam sed libero. Mollitia deserunt dolor vel!
+                        </p>
+                        <p>
+                            1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro quibusdam nulla
+                            deserunt excepturi, laudantium harum laboriosam impedit earum voluptate eaque minima
+                            quisquam veniam sed libero. Mollitia deserunt dolor vel!
+                        </p>
+                        <p>
+                            1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro quibusdam nulla
+                            deserunt excepturi, laudantium harum laboriosam impedit earum voluptate eaque minima
+                            quisquam veniam sed libero. Mollitia deserunt dolor vel!
+                        </p>
+                    </article>
+                    <article data-skill="texto">
+                        <p>
+                            2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro quibusdam nulla
+                            deserunt excepturi, laudantium harum laboriosam impedit earum voluptate eaque minima
+                            quisquam veniam sed libero. Mollitia deserunt dolor vel!
+                        </p>
+                    </article>
+                    <article data-skill="texto">
+                        <p>
+                            3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro quibusdam nulla
+                            deserunt excepturi, laudantium harum laboriosam impedit earum voluptate eaque minima
+                            quisquam veniam sed libero. Mollitia deserunt dolor vel!
+                        </p>
+                    </article>
+                    <article data-skill="texto">
+                        <p>
+                            4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro quibusdam nulla
+                            deserunt excepturi, laudantium harum laboriosam impedit earum voluptate eaque minima
+                            quisquam veniam sed libero. Mollitia deserunt dolor vel!
+                        </p>
+                    </article>
+                    <article data-skill="texto">
+                        <p>
+                            5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro quibusdam nulla
+                            deserunt excepturi, laudantium harum laboriosam impedit earum voluptate eaque minima
+                            quisquam veniam sed libero. Mollitia deserunt dolor vel!
+                        </p>
+                    </article>
                 </div>
             </div>
 
-        </div>
-    </section>
+        </section>
 
+        <section class="container portifolio" id="portifolio">
+            <header>
+                <h2 class="portifolio-titulo">Portifolio</h2>
+            </header>
+            <div class="portifolio-controllers">
+                <div class="controller-option ativo" data-controller="todos"><span>Todos</span></div>
+                <div class="controller-option" data-controller="onepage"><span>Onepage</span></div>
+                <div class="controller-option" data-controller="site"><span>Site</span></div>
+                <div class="controller-option" data-controller="blog"><span>Blog</span></div>
+            </div>
+            <div class="portifolio-lista row">
+                <div class="portifolio-item col-6 col-s-4 col-m-3" data-item="onepage">
+                    <img class="portifolio-img" src="assets/images/bg-intro.jpg" alt="">
+                    <span class="portifolio-tag">onepage</span>
+                </div>
+                <div class="portifolio-item col-6 col-s-4 col-m-3" data-item="blog">
+                    <img class="portifolio-img" src="assets/images/bg-intro.jpg" alt="">
+                    <span class="portifolio-tag">blog</span>
+                </div>
+                <div class="portifolio-item col-6 col-s-4 col-m-3" data-item="site">
+                    <img class="portifolio-img" src="assets/images/bg-intro.jpg" alt="">
+                    <span class="portifolio-tag">site</span>
+                </div>
+                <div class="portifolio-item col-6 col-s-4 col-m-3" data-item="blog">
+                    <img class="portifolio-img" src="assets/images/bg-intro.jpg" alt="">
+                    <span class="portifolio-tag">Blog</span>
+                </div>
+                <div class="portifolio-item col-6 col-s-4 col-m-3" data-item="onepage">
+                    <img class="portifolio-img" src="assets/images/bg-intro.jpg" alt="">
+                    <span class="portifolio-tag">onepage</span>
+                </div>
+                <div class="portifolio-item col-6 col-s-4 col-m-3" data-item="onepage">
+                    <img class="portifolio-img" src="assets/images/bg-intro.jpg" alt="">
+                    <span class="portifolio-tag">onepage</span>
+                </div>
+                <div class="portifolio-item col-6 col-s-4 col-m-3" data-item="site">
+                    <img class="portifolio-img" src="assets/images/bg-intro.jpg" alt="">
+                    <span class="portifolio-tag">site</span>
+                </div>
+                <div class="portifolio-item col-6 col-s-4 col-m-3" data-item="blog">
+                    <img class="portifolio-img" src="assets/images/bg-intro.jpg" alt="">
+                    <span class="portifolio-tag">blog</span>
+                </div>
+                <div class="portifolio-item col-6 col-s-4 col-m-3" data-item="onepage">
+                    <img class="portifolio-img" src="assets/images/bg-intro.jpg" alt="">
+                    <span class="portifolio-tag">onepage</span>
+                </div>
+                <div class="portifolio-item col-6 col-s-4 col-m-3" data-item="onepage">
+                    <img class="portifolio-img" src="assets/images/bg-intro.jpg" alt="">
+                    <span class="portifolio-tag">onepage</span>
+                </div>
+                <div class="portifolio-item col-6 col-s-4 col-m-3" data-item="site">
+                    <img class="portifolio-img" src="assets/images/bg-intro.jpg" alt="">
+                    <span class="portifolio-tag">site</span>
+                </div>
+                <div class="portifolio-item col-6 col-s-4 col-m-3" data-item="blog">
+                    <img class="portifolio-img" src="assets/images/bg-intro.jpg" alt="">
+                    <span class="portifolio-tag">blog</span>
+                </div>
+            </div>
+        </section>
 
-    <br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </main>
+    <footer>
 
-    <footer id="contato">
-        <div class="container row">
-            <div class="col-s-5">
-                <h3>titulo</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. s vitae a.</p>
-            </div>
-            <div class="col-6 col-s-4">
-                <h3>titulo</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. s vitae a.</p>
-            </div>
-            <div class="col-6 col-s-3">
-                social
-            </div>
-        </div>
     </footer>
     <script src="scripts/main.js"></script>
 </body>

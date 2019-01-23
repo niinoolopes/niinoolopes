@@ -1,6 +1,11 @@
-/* SCROLL */
+/* 
+  Scroll Suave
+*/
+
+// ----------------------------------------------
+
 // Adiciona evento para cada item do menu
-var itensMenu = document.querySelectorAll('.menu a');
+const itensMenu = document.querySelectorAll('.topo a');
 itensMenu.forEach(item => {
   item.addEventListener('click', scrollToId);
 })
@@ -11,13 +16,9 @@ function scrollToId(e) {
   //identicica o valor do href
   var id = this.getAttribute('href'); 
 
-  // brack point
-  var alturaMenuFixo;
-  // var tela = window.innerWidth;
-  // (tela >= 766) ?  alturaMenuFixo = 42 : alturaMenuFixo = 38;
-
-  var section = document.querySelector(id).offsetTop - 38;
+  var section = document.querySelector(id).offsetTop - 48;
   // se for intro volta para o 0, que é o topo
+  console.log(id);
   if (id == "#intro") {
     section = 0;
   }
@@ -26,7 +27,7 @@ function scrollToId(e) {
       top: section,
       behavior: "smooth"
     }
-  );
-  document.querySelector('.menu').classList.remove('ativo')
+  ); 
+  document.querySelector('.topo-menu').classList.remove('ativo');
 }
 /* FIM SCROLL */

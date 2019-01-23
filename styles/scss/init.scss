@@ -7,19 +7,25 @@
 @import 'mixin/_mixin-estilos.scss';
 
 
+
 // PARTS
-@import 'page/header';
-@import 'page/footes';
-@import 'page/_js-carrossel';
-@import 'page/_js-modal';
+@import 'page/_header';
+@import 'page/_footer';
+
+
 
 // PAGES
-@import 'page/home/intro';
-@import 'page/home/sobre';
-@import 'page/home/categorias';
-@import 'page/home/portifolio';
-@import 'page/home/blog';
-@import 'page/home/escreva-me';
+@import 'page/HOME/intro';
+@import 'page/HOME/sobre';
+// @import 'page/HOME/referencia';
+@import 'page/HOME/frase';
+@import 'page/HOME/skill';
+@import 'page/HOME/portifolio';
 
-@import 'page/sobre/intro';
-@import 'page/sobre/main';
+
+// INCLUDES
+@import '_js-carousel-mobile';
+// @import 'page/_js-modal';
+
+
+

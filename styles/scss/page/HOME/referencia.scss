@@ -1,0 +1,115 @@
+.referencia{
+  margin: 20px 0;
+  @include MediaQueryMin(S){
+    margin: 70px 0;
+  }
+}
+.referencia-titulo{
+  font-family: monospace;
+  line-height: 1;
+  font-size: 1.25em; // 20
+  margin: 10px 0;
+  text-align: center;
+  @include MediaQueryMin(S){
+    font-size: 2em; // 32
+    margin: 0 0 16px;
+  }
+}
+.referencia-content{
+  margin: auto;
+  max-width: 800px;
+
+  overflow: hidden;
+  overflow-y: auto;
+  height: 400px;
+
+  border: 1px solid red;
+  position: relative;
+}
+.referencia-item{
+  width: 50%;
+  padding: 0 20px;
+  margin: 10px 0 25px;
+  position: relative; 
+}
+
+.referencia-item .referencia-itemTitulo::after{
+  content: "";
+  display: block;
+  height: 1px;
+  width: 50%;
+  // margin: 5px auto;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+// POSICIONAMENTO DIREITA
+.referencia-item:nth-of-type(2n+2){
+  transform:translateX(100%); }
+
+.referencia-item:nth-of-type(2n+2) .referencia-itemTitulo::after{
+  margin-right: auto }
+
+// POSICIONAMENTO ESQUERDA
+.referencia-item:nth-of-type(2n+1){
+  text-align: right }
+
+.referencia-item:nth-of-type(2n+1) .referencia-itemTitulo::after{
+  margin-left: auto }
+
+
+
+
+.referencia-itemData{
+  font-size: .875em; //14
+  color: rgba(0,0,0,.4);
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.referencia-itemTitulo{
+  font-size: 1.275em; //20
+  color: rgba(0,0,0,1);
+  text-transform: uppercase;
+}
+.referencia-itemDescricao{
+  font-size: .875em; //14
+  color: rgba(0,0,0,.4);
+  
+}
+
+
+
+// BARRA CENTRAL
+.referencia-content::after{
+  content: "";
+  display: block;
+  width: 2px;
+  height: 800px;
+  background: rgba(0,0,0,1);
+  position: absolute;
+  left: 50%;
+  top: 25px;
+  transform: translate3d(-60%,0%,0);
+}
+// MARCADORES ESTILO
+.referencia-data::after{
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(0,0,0,1);
+  position: absolute;
+  top: 7px; 
+}
+// MARCADORES DIREITA
+.referencia-item:nth-of-type(2n+2) .referencia-data::after{
+  left: -5px;
+}
+// MARCADORES ESQUERDA
+.referencia-item:nth-of-type(2n+1) .referencia-data::after{
+  right:  -5px;
+}
+
+ 
+
+
