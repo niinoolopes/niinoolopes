@@ -39,7 +39,7 @@ const images = {
 gulp.task('serve', function () {
     browserSync.init({
         server: {
-            baseDir: app+'/',
+            baseDir: app+'./',
         }
     }); 
     console.log("SERVE - OK!");  
@@ -113,15 +113,15 @@ gulp.task('html', function(){
 
 /*-TASK DEFAULT-*/
 gulp.task('default', () => {
-    gulp.run('styles-grid');
+    // gulp.run('styles-grid');
     gulp.run('styles');
     gulp.run('scripts');
-    gulp.run('images'); 
+    // gulp.run('images'); 
     gulp.run('serve')  
     console.log("GULP START OK!"); 
     gulp.watch( app +'/'+ css.past +'/'+ css.src +'/'+ css.allFile ,['styles']);
     gulp.watch( app +'/'+ javascript.past +'/'+ javascript.src +'/'+ javascript.allFile ,['scripts']);
-    gulp.watch( app +'/'+ images.past +'/'+ images.src +'/'+ images.allFile ,['images']);
+    // gulp.watch( app +'/'+ images.past +'/'+ images.src +'/'+ images.allFile ,['images']);
     gulp.watch( app +'/'+ structure.allFile_html).on("change", reload);
     console.log("WACTH OK!"); 
 });
