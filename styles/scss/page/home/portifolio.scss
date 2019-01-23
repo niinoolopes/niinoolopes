@@ -1,55 +1,95 @@
 .portifolio{
-    @include padding_section();
+  padding: 24px 0;
 }
 .portifolio header{
-    @include header_section();
+  
 }
-.portifolio-titulo{
-    @include titulo_section();
-}
-.portifolio-titulo:after{
-    // @include separador_titulo_section(325px);
-}
-.portifolio .row{
-    align-content: flex-start;
 
-    box-shadow: 0 1px 10px 1px rgba(0, 0, 0, .3);
-    overflow: hidden;
-    overflow-y: auto;
-    background: rgba(0, 0, 0, .1);
-    height: 275px;
-    @include MediaQueryMin(L){
-        height: 440px;
+// titulo
+.portifolio-titulo{
+  @include section_titulo();
+}
+.portifolio-titulo::before,
+.portifolio-titulo::after {
+    @include section_titulo_pseudo();
+}
+
+
+.portifolio-controllers{
+  display: flex;
+  height: 65px;
+  max-width: 450px;
+  margin: 15px auto;
+  align-items: center;
+  // background: rgba(100,100,100,.3);
+}
+.controller-option{
+  height: 100%;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(200,200,200,.5);
+  transition: .6s;
+}
+.controller-option span{
+  font-size: .785em;
+  display: block;
+  width: fit-content;
+  font-size: 12px;
+  transform: rotate(-70deg);
+  transition: .6s;
+  color: rgba(0,0,0,.75);
+}
+.controller-option.ativo{ 
+  background: rgba(100,100,100,.15);
+  width: 100%;
+  border-left: 1px solid;
+  border-right: 1px solid;
+}
+.controller-option.ativo span{
+  transform: rotate(360deg);
+  animation: optionEfect .8s forwards;
+  color: rgba(0,0,0,1);
+}
+@keyframes optionEfect { 
+    75%{ 
+      font-size: 12px;
+    }
+    100%{
+      font-size: 18px;
+      letter-spacing: 2px;
+      font-weight: bold;
     }
 }
-// tabs
-.tab-lista {
-    display: flex;
-    justify-content: center;
-    margin: 12px auto;
+
+
+.portifolio-lista{
+  overflow: hidden;
+  overflow-y: auto;
+  height: 400px;
+  align-content: flex-start;
+  align-items: flex-start;
+  background: rgba(200,200,200,.5);
 }
-.tab-item{
-    padding: 5px 10px;
-    color: rgba(0, 0, 0, .5);
-    cursor: pointer;
-}
-.tab-item.ativo{
-    color: rgba(0, 0, 0, 1);
-    font-weight: bold;
-}
-.portifolio-item{ 
-    padding: 4px;
-    transition-duration: .5s;
-}
- 
-.portifolio-texto{
-    display: none;
+.portifolio-item{
+  position: relative;
+  overflow: hidden;
+  padding: 2px;
 }
 .portifolio-img{
-    transition-duration: 0.5s;
     display: block;
-    // margin: auto;
-    // box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.66);
-    margin: 0 auto;
-    border: none;
+    border: 0;
+}
+.portifolio-tag{
+  position: absolute;
+  bottom: 0;
+  right: 0;  
+  color: #fff;
+  display: inline-block;
+  font-size: .875em;
+  padding: 5px;
+  margin: 2px;
+  background: rgba(100,100,100,.85);
+  border-top-left-radius: 40%;
 }

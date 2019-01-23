@@ -1,180 +1,24 @@
-// PADDING PARA SECTIONS
-@mixin padding_section(){
-    padding: 24px 0px; 
-    @include MediaQueryMin(M){
-        padding: 28px 0px; 
-    }
-}
-// PADDING PARA HEADER EM SECTIONS COM TITULOS
-@mixin header_section(){
-    padding-bottom: 8px;
-}
-// TITULO PARA HEADER EM SECTIONS
-@mixin titulo_section(){
-    font-size: 1.75em; //28
-    margin-bottom: 6px;
-    line-height: 1; 
-    text-align: center; 
-    @include MediaQueryMin(S){
-        font-size: 2em; // 32px 
-        margin-bottom: 12px;
-    }
-}
-@mixin subTitulo_section(){
-    text-align: center;
-    font-size: 1em; // 16px 
-}
-// MARGINS PARA ELEMENTOS EM MOBILES
-@mixin margin_in_mobile($v){
-    @include MediaQueryMax(S){
-        margin-left: $v + px;
-        margin-right: $v + px;
-    }
-}
+@mixin section_titulo(){
+    width: fit-content;
+    margin: 10px auto;
 
-
-// -----------------------------
-// Intro Pages - BACKGROUND
-@mixin intro_background(){
-    background: linear-gradient(140deg, rgba(0, 0, 0, .8), rgba(0, 0, 0, 0)), url(../assets/images/bg-intro.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #fff;
-}
-@mixin intro_row($type){
+    display: flex;
     align-items: center;
-    @include MediaQueryMax(S){
-        justify-content: center;
-        text-align: center;
-            @if $type == INDEX{
-                height: 100vh;
-            }
-            @else if $type == PAG{
-                padding: 50vh 0;
-                margin-top: 37px;
-            }
-        }
-    @include MediaQueryMin(S){
-        @if $type == INDEX{
-            margin-top: 37px;
-            height: 400px;
-        }
-        @else if $type == PAG{
-            margin-top: 37px;
-            height: 300px; 
-        }
-    }
-    @include MediaQueryMin(M){
-        margin-top: 80px;
-    }
-    @include MediaQueryMin(L){
-        height: 500px;
-    }
 
-}
-@mixin intro_titulo(){
-    font-size: 2em;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-family: monospace; 
-    margin-bottom: 10px;
-    @include MediaQueryMin(M){
-        font-size: 2.375em; //38
-    }
-}
-@mixin intro_titulo_after(){
-    content: "";
-    display: block;
-    height: 1px;
-    background: #fff;
-    margin: 6px 0 0;
-    width: 100%;
-    @include MediaQueryMin(M){
-        width: 100px;
-        margin: 10px 0 16px;
-    }
-}
-@mixin intro_frase(){
-    color: rgba(255, 255, 255, .75);
-    font-size: 1em; //16
-    padding-left: 15px;
-    text-transform: capitalize;
-    @include MediaQueryMin(M){
-        font-size: 1.125em; //18
-    }
-}
-
-
-
-
-
-// -----------------------------
-
- 
-
-.home-intro{ 
-    background: linear-gradient(140deg, rgba(0, 0, 0, .8), rgba(0, 0, 0, 0)), url(../assets/images/bg-intro.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #fff;
-}
-.home-intro .row{
-    align-items: center;
-    @include MediaQueryMax(S){
-        height: 100vh;
-        justify-content: center;
-        text-align: center;
-    }
-    @include MediaQueryMin(S){
-        height: 400px;
-    }
-    @include MediaQueryMin(L){
-        height: 500px;
-        margin-top: 80px;
-    }
-}
-.home-intro-titulo{
-    font-size: 2em;
-    font-weight: bold;
-    text-transform: uppercase;
     font-family: monospace;
-    // padding-left: 10px;
-    margin-bottom: 10px;
-    @include MediaQueryMin(M){
-        font-size: 2.375em; //38
+    line-height: 1;
+    font-size: 1.5em;
+    @include MediaQueryMin(S){
+      font-size: 2em;
+      margin: 0 auto 16px;
     }
 }
-.home-intro-titulo:after{
+@mixin section_titulo_pseudo(){
     content: "";
-    display: block;
+    display: inline-block;
+    background: #000;
+    width: 80px;
     height: 1px;
-    background: #fff;
-    margin: 6px 0 0;
-    width: 100%;
-    @include MediaQueryMin(M){
-        width: 100px;
-        margin: 10px 0 16px;
-    }
+    margin: 0 15px;
+    box-shadow: 0 1px 10px 1px rgba(0, 0, 0, .75);
 }
-.home-intro-frase{ 
-    color: rgba(255, 255, 255, .75);
-    font-size: 1em; //16
-    padding-left: 15px;
-    text-transform: capitalize;
-    @include MediaQueryMin(M){
-        font-size: 1.125em; //18
-    }
-}
-
-
-
-
-
-
-
-
-
-
-

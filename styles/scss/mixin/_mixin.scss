@@ -60,30 +60,4 @@ $gutter: 16;
             @content; 
         }
     }
-} 
-
-// CORES
-$cor_texto_01: black;
-
-// FONTS
-$font_primeira:  Georgia, 'Times New Roman', Times, serif;
-
-// mixin para estilos repetidos
-/*
--- EXEMPLO --
-@mixin titulo_principal($size,$padleft){ 
-    color: #fff;
-    font-size: $size+em;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-family: monospace;
-    padding-left: $padleft+px;
 }
-*/
-
-
-/*
-
-COLEÇÃO DE ESTILOS 
-
-*/

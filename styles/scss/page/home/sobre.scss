@@ -1,53 +1,70 @@
-.section-sobre{
-    @include padding_section();
-} 
-.section-sobre header{ 
-    @include header_section();
+.sobre{
+    padding: 30px 0;
 }
-.section-sobreTitulo{
-    @include titulo_section();
-    @include margin_in_mobile(8);
-}
-.section-sobreTitulo a{
-    color: $cor_texto_01;
-    text-decoration: none;
-}
-.section-sobreFrase {
-    @include subTitulo_section();
-    @include margin_in_mobile(8);
-}
-.section-sobreCard{
-    transition: all .35s;
-    padding: 0 35px;
-    margin-bottom: 20px;
-    text-align: center; 
-    @include MediaQueryMin(M){
-        margin-bottom: unset;
-    }
-    @include MediaQueryMin(L){
-        padding: 0 20px;
+.sobre-titulo {
+    @include section_titulo();
+    @include MediaQueryMax(S){
+        margin-bottom: 25px;
     }
 }
-.section-sobreIcone{
-    border: 1px solid rgba(77, 77, 255, 0.75);  
-    font-size: 1.25em; // 18px
-    max-width: 45px;
-    height: 45px; 
+.sobre-titulo::before,
+.sobre-titulo::after {
+    @include section_titulo_pseudo();
+}
+.sobre-icone {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    
+    width: 100px;
+    height: 100px;
+
     margin: 10px auto;
-    @include MediaQueryMin(M){
-        margin: 20px auto;
+    padding: 25px;
+
+    border: 2px solid rgba(0, 0, 0, 0.10);
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-radius: 4px;
+
+    background: linear-gradient(
+        150deg,
+        rgba(0, 0, 0, .00) 20%,
+        rgba(0, 0, 0, .15) 50%,
+        rgba(0, 0, 0, .00) 80%
+    );
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.20);
+    @include MediaQueryMin(S){
+        margin: 25px auto;
     }
 }
-.section-sobreCard h3{
-    line-height: 1; 
-    font-size: 1.125em; // 18px 
+.sobre-icone > img{ 
+    max-height: 35px;
 }
-.section-sobreCard p{
-    line-height: 20px;
-    font-size: 0.875em; // 14px
-    color: rgba(0,0,0,.5);
-} 
-// ...
+.subsobre-titulo {
+    font-size: 1.25em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.subsobre-titulo:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 50%;
+    margin: 5px auto;
+    background: rgba(0,0,0,.20);
+}
+.sobre-descricao {
+    font-size: .875em;
+    color: rgba(100,100,100,1);
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 30px;
+    @include MediaQueryMin(S){
+        margin-bottom: 0;
+    }
+}
+.js-carrosselContainer{
+    // margin-top: 55px;
+}

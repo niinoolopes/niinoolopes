@@ -1,0 +1,124 @@
+// sections
+.section-skill{
+  padding: 28px 0;
+  @include MediaQueryMin(M){
+    padding: 60px 0;
+  }
+}
+// div 1
+.section-skill > div:nth-child(2){
+  padding: 15px 0;
+}
+// div 2
+.section-skill > div:nth-child(3){
+    box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    // width: 95%;
+    margin: auto;
+    @include MediaQueryMin(S){
+        // width: 80%;
+    }
+}
+
+
+// skill titulo
+.skill-titulo{
+    @include section_titulo();
+}
+.skill-titulo::before,
+.skill-titulo::after {
+    @include section_titulo_pseudo();
+}
+
+
+// skill
+.skill-item{
+    width: min-content;
+    margin: 0 auto 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.skill-nome{
+    text-align: center;
+    margin: 10px 0 5px;
+}
+.skill-barra {
+    width: 200px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 4px 0px rgba(0, 0, 0, .5);
+}
+.progress-bar {
+    display: block;
+    background: red;
+    width: 80%;
+    height: 4px;
+}
+span.skill-num {
+    font-size: 12px;
+    font-style: italic;
+}
+// collapse
+.skill-nav,
+.skill-items{
+    height: 200px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.skill-nav{
+    background: rgba(0, 0, 0, .05);
+    border: 2px solid transparent;
+    padding: 0px 5px;
+    @include MediaQueryMax(S){
+        height: 125px;
+    }
+}
+.skill-menu li{
+    display: block; 
+    cursor: pointer;
+    padding: 5px 35px;
+    margin: 5px 0;
+    background: rgba(0, 0, 0, .07);
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    text-align: center;
+    @include MediaQueryMin(S){
+        text-align: left;
+        width: 300px;
+    }
+}
+.skill-menu li:hover{
+    box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.15);
+}
+.skill-menu li:not( :nth-last-child(1) ){
+
+}
+// textos
+.skill-items{
+    flex: 1;
+    padding: 15px 15px 0;
+    @include MediaQueryMin(S){
+        padding: 10px 15px;
+    }
+}
+[data-skill="texto"]{
+    display: none;
+    min-height: 100%;
+    overflow-y: auto;
+}
+[data-skill="texto"] p{
+    margin-bottom: 16px;
+}
+[data-skill="texto"].ativo{
+    animation: exibeCard forwards .45s;
+    display: block;
+}
+@keyframes exibeCard{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

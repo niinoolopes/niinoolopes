@@ -1,54 +1,45 @@
-.home-intro{ 
-    background: linear-gradient(140deg, rgba(0, 0, 0, .8), rgba(0, 0, 0, 0)), url(../assets/images/bg-intro.jpg);
-    background-position: center;
+.intro{
+    background: linear-gradient(
+        90deg, 
+        rgba(0, 0, 0, .5), 
+        rgba(0, 0, 0, .75)
+        ), url(../assets/images/bg-intro.jpg);
+    background-position: center center;
     background-size: cover;
-    background-repeat: no-repeat;
-    color: #fff;
-}
-.home-intro .row{
+    background-attachment: fixed;
+    height: calc(100vh - 52px); 
+    margin-top: 50px;
+    display: flex;
     align-items: center;
-    @include MediaQueryMax(S){
-        height: 100vh;
-        justify-content: center;
-        text-align: center;
-    }
-    @include MediaQueryMin(S){
-        height: 400px;
-    }
-    @include MediaQueryMin(L){
-        height: 500px;
-        margin-top: 80px;
+    justify-content: center;
+    @include MediaQueryMin(M){ 
+        height: 400px; 
     }
 }
-.home-intro-titulo{
-    font-size: 2em;
-    font-weight: bold;
-    text-transform: uppercase;
+
+.intro-titulo,
+.intro-frase{
+    line-height: 1;
+    text-align: center;  
+}
+.intro-titulo{
+    color: #fff; 
     font-family: monospace;
-    // padding-left: 10px;
-    margin-bottom: 10px;
-    @include MediaQueryMin(M){
-        font-size: 2.375em; //38
+    font-family: 'Megrim', cursive;
+    font-size: 2em; //32
+    @include MediaQueryMin(S){
+        font-size: 2.75em; //40
     }
 }
-.home-intro-titulo:after{
+h1.intro-titulo::after {
     content: "";
     display: block;
-    height: 1px;
-    background: #fff;
-    margin: 6px 0 0;
-    width: 100%;
-    @include MediaQueryMin(M){
-        width: 100px;
-        margin: 10px 0 16px;
-    }
+    background: rgba(255,255,255, .35);;
+    width: 150px;
+    height: 2px;
+    margin: 5px auto 15px;
 }
-.home-intro-frase{ 
-    color: rgba(255, 255, 255, .75);
-    font-size: 1em; //16
-    padding-left: 15px;
-    text-transform: capitalize;
-    @include MediaQueryMin(M){
-        font-size: 1.125em; //18
-    }
+.intro-frase{ 
+    font-size: .875em; // 14
+    color: rgba(255,255,255, .75);
 }

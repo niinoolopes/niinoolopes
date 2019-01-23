@@ -1,0 +1,18 @@
+HTML > semantica
+
+CSS3 > Animacoes
+SASS > processadores de estilo para acelerar o estilo e melhorar o Claen no estilos
+
+Javascript > intera��es
+Bootstrap > css pronto e bonito
+
+PHP > Logica programa��o simples usado com Codeigniter
+WORDPRESS > Frameword CMS para dinamica do site com area administratica completa com infinitas posibilidades de cria��o
+
+SQL >
+
+GIT > Versionamento obrigatorio para um desenvolvedor
+
+NPM > Automa��o tem que existir pois podemos usar varios package para agilizar e melhorar o desenvolvimento
+
+photoshop
