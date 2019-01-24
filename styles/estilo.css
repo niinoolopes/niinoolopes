@@ -490,8 +490,6 @@ h1.intro-titulo::after {
   padding: 15px 0; }
 
 .section-skill > div:nth-child(3) {
-  box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(0, 0, 0, 0.25);
   margin: auto; }
 
 .skill-titulo {
@@ -545,49 +543,37 @@ span.skill-num {
   font-size: 12px;
   font-style: italic; }
 
-.skill-nav,
-.skill-items {
-  height: 200px;
-  overflow: hidden;
-  overflow-y: auto; }
-
 .skill-nav {
-  background: rgba(0, 0, 0, 0.05);
-  border: 2px solid transparent;
-  padding: 0px 5px; }
-  @media (max-width: 575px) {
-    .skill-nav {
-      height: 125px; } }
+  overflow: hidden;
+  overflow-x: auto; }
+
+.skill-menu {
+  display: flex; }
 
 .skill-menu li {
-  display: block;
-  cursor: pointer;
-  padding: 5px 35px;
-  margin: 5px 0;
-  background: rgba(0, 0, 0, 0.07);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  text-align: center; }
-  @media (min-width: 576px) {
-    .skill-menu li {
-      text-align: left;
-      width: 300px; } }
+  font-size: 0.875em;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace; }
 
-.skill-menu li:hover {
-  box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.15); }
+.skill-menu li.ativo {
+  font-size: 1em;
+  font-weight: bold;
+  background: #e2e2e2;
+  background: linear-gradient(180deg, transparent 0%, #e2e2e2 50%); }
 
 .skill-items {
-  flex: 1;
-  padding: 15px 15px 0; }
-  @media (min-width: 576px) {
-    .skill-items {
-      padding: 10px 15px; } }
+  background: #e2e2e2;
+  padding: 10px; }
 
 [data-skill="texto"] {
   display: none;
   min-height: 100%;
   overflow-y: auto; }
 
-[data-skill="texto"] p {
+[data-skill="texto"] p:not(:nth-last-child(1)) {
   margin-bottom: 16px; }
 
 [data-skill="texto"].ativo {
