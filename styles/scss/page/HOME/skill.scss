@@ -11,8 +11,8 @@
 }
 // div 2
 .section-skill > div:nth-child(3){
-    box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(0, 0, 0, 0.25);
+    // box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.5);
+    // border: 1px solid rgba(0, 0, 0, 0.25);
     // width: 95%;
     margin: auto;
     @include MediaQueryMin(S){
@@ -60,54 +60,47 @@ span.skill-num {
     font-size: 12px;
     font-style: italic;
 }
-// collapse
-.skill-nav,
-.skill-items{
-    height: 200px;
+// collapse 
+.skill-nav{ 
     overflow: hidden;
-    overflow-y: auto;
+    overflow-x: auto;
 }
-.skill-nav{
-    background: rgba(0, 0, 0, .05);
-    border: 2px solid transparent;
-    padding: 0px 5px;
-    @include MediaQueryMax(S){
-        height: 125px;
-    }
+.skill-menu{
+    display: flex; 
 }
 .skill-menu li{
-    display: block; 
-    cursor: pointer;
-    padding: 5px 35px;
-    margin: 5px 0;
-    background: rgba(0, 0, 0, .07);
-    border-bottom: 1px solid rgba(0, 0, 0, .2);
-    text-align: center;
-    @include MediaQueryMin(S){
-        text-align: left;
-        width: 300px;
-    }
+    font-size: 0.875em; 
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    font-family: monospace;
+
 }
-.skill-menu li:hover{
-    box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.15);
+.skill-menu li.ativo{
+    font-size: 1em;
+    font-weight: bold; 
+    background: #e2e2e2;
+    background: linear-gradient( 180deg, transparent 0%, #e2e2e2 50%);
 }
 .skill-menu li:not( :nth-last-child(1) ){
 
 }
 // textos
 .skill-items{
-    flex: 1;
-    padding: 15px 15px 0;
-    @include MediaQueryMin(S){
-        padding: 10px 15px;
-    }
+    // flex: 1;
+    background: #e2e2e2;
+    padding: 10px;
+    // @include MediaQueryMin(S){
+    //     padding: 10px 15px;
+    // }
 }
 [data-skill="texto"]{
     display: none;
     min-height: 100%;
     overflow-y: auto;
 }
-[data-skill="texto"] p{
+[data-skill="texto"] p:not( :nth-last-child(1) ){
     margin-bottom: 16px;
 }
 [data-skill="texto"].ativo{

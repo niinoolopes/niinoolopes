@@ -4,7 +4,6 @@
 .portifolio header{
   
 }
-
 // titulo
 .portifolio-titulo{
   @include section_titulo();
@@ -13,15 +12,12 @@
 .portifolio-titulo::after {
     @include section_titulo_pseudo();
 }
-
-
 .portifolio-controllers{
   display: flex;
   height: 65px;
   max-width: 450px;
-  margin: 15px auto;
+  margin: 25px auto 10px;
   align-items: center;
-  // background: rgba(100,100,100,.3);
 }
 .controller-option{
   height: 100%;
