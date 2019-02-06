@@ -1,0 +1,77 @@
+.section-skill{
+    @include section_area(40,20);
+}
+.skill-header{
+    @include section_header();
+}
+.skill-titulo{
+    @include section_titulo(); 
+}
+.skill-titulo::before,
+.skill-titulo::after {
+    @include section_titulo_pseudo();
+}
+
+
+.skill-card{
+    box-shadow: inset 0 0 15px 0px rgba(15, 40, 100, 0.25)  ;
+    cursor: pointer;
+}
+
+
+.card-inner{
+    height: 250px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d; 
+}
+
+
+// FONT - BACK
+.skill-card-front,
+.skill-card-back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    backface-visibility: hidden;
+}
+// FRONT 
+.skill-card-front{
+    // background-color: #0c2869;
+}
+.skill-icone { 
+    display: block;
+    width: 60px;
+    margin-bottom: 10px;
+    // margin: 70px auto 0;
+}
+.skill-nome {
+    font-size: 1.25em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, .85);
+}
+
+// BACK
+.skill-card-back{
+    padding: 5px 10px;
+    transform: rotateY(180deg);
+}
+
+// .skill-card:hover .card-inner,
+.skill-card.ativo .card-inner{
+    transform: rotateY(180deg);
+}
+
+
+
+
+

@@ -1,16 +1,28 @@
+@mixin section_area($b1,$b2){ 
+    padding-bottom: ($b1 * 1) + px;
+    @include MediaQueryMin(S){
+        padding-bottom: ($b2 * 1.5) + px;
+    }
+}
+@mixin teste($v){ 
+        padding-bottom: ($v * 10) + px;
+}
+@mixin section_header(){ 
+    line-height: 2;
+    @include MediaQueryMin(M){
+        line-height: 4;
+    }
+}
 @mixin section_titulo(){
     width: fit-content;
-    margin: 10px auto;
-
-    display: flex;
-    align-items: center;
+    margin: 0 auto 20px;
 
     font-family: monospace;
-    line-height: 1;
     font-size: 1.5em;
     @include MediaQueryMin(S){
-      font-size: 2em;
-      margin: 0 auto 16px;
+        margin: 0 auto 0;
+    //   font-size: 2em;
+    //   margin: 0 auto 16px;
     }
 }
 @mixin section_titulo_pseudo(){
@@ -19,6 +31,6 @@
     background: #000;
     width: 30px;
     height: 1px;
-    margin: 0 15px;
+    margin: 5px 15px;
     box-shadow: 0 1px 10px 1px rgba(0, 0, 0, .75);
 }

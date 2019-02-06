@@ -5,26 +5,25 @@
 // MIXIN
 @import 'mixin/_mixin.scss';
 @import 'mixin/_mixin-estilos.scss';
-
-
+ 
 
 // PARTS
 @import 'page/_header';
 @import 'page/_footer';
 
-
-
+ 
 // PAGES
-@import 'page/HOME/intro';
-@import 'page/HOME/sobre';
-// @import 'page/HOME/referencia';
-@import 'page/HOME/frase';
-@import 'page/HOME/skill';
-@import 'page/HOME/portifolio';
+@import 'page/home/intro';
+@import 'page/home/sobre';
+@import 'page/home/skill-cards';
+@import 'page/home/frase';
+// @import 'page/home/referencia';
+// @import 'page/home/portifolio';
 
 
 // INCLUDES
 @import '_js-carousel-mobile';
+@import '_js-add-animation';
 // @import 'page/_js-modal';
 
 

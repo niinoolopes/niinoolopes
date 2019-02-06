@@ -61,6 +61,22 @@ const showItem = (txt) => {
     var tabsDisplaying = document.querySelectorAll(`[data-item="${txt}"]`);
     tabsDisplaying.forEach(item => item.style.display = 'block')
 }
+const datas =  document.querySelectorAll('[data-anima]');
+
+window.addEventListener('scroll',()=>{
+
+
+
+    console.log(datas[0].offsetTop < window.pageYOffset);
+    datas.forEach( (element) =>{ 
+    // console.log(element.offsetTop);
+            
+    })
+
+})
+
+
+// console.log(datas);
 /*
     lib: slider
 */
@@ -170,3 +186,10 @@ function scrollToId(e) {
   document.querySelector('.topo-menu').classList.remove('ativo');
 }
 /* FIM SCROLL */
+let cards = document.querySelectorAll('.skill-card')
+
+cards.forEach( item => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('ativo')
+    })
+})
