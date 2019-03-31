@@ -1,4 +1,11 @@
-_gulp/node_modules
-_gulp/node_modules/package-lock.json
 app-old
 app-old1
+node_modules
+conteudo
+arquivos
+package-lock.json
+arquivos-old.zip
+
+node_modules
+gulp/node_modules
+gulp/package-lock.json
