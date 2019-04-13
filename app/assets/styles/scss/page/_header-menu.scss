@@ -1,0 +1,145 @@
+#header{
+  position: relative;
+}
+
+.header__menu{ 
+  overflow: hidden; 
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .33s; 
+  visibility: collapse;
+  /*
+  background: linear-gradient(
+    rgba(20, 40, 60, 0.1),
+    rgba(20, 40, 60, 0.15),
+    rgba(20, 40, 60, 0.1)
+    ),#fff;
+    background: red;
+    */
+    background: rgba(10, 20, 30, 1);
+  height: calc( 100vh - 50px);
+  z-index: 3;
+    // transform: translateY(10px);
+}
+
+.header__menu.menu--show{
+  opacity: 1;
+  visibility: visible;
+  // transform: translateY(0);
+} 
+
+.header__menu .container,
+.header__menu .menu__lista{
+  height: 100%;
+}
+
+.menu__lista{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} 
+
+.lista__item{ 
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+}
+
+.lista__item:hover{ 
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+}
+
+
+
+/*
+.lista__item:hover{
+  opacity: 1;
+  transition: .7s;
+  background: linear-gradient(#14283c 0, rgba(20, 40, 60, 0.1) 70%);
+}
+.lista__item:hover .lista__link{
+  color: #fff;
+  text-decoration: none; 
+}
+
+.lista__item:hover .lista__link-texto::after{
+  background: #fff;  
+}
+*/
+
+.lista__link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  // border-bottom: 2px solid #fff;
+}
+
+.lista__item:first-child .lista__link{
+  // border-top: 2px solid #fff;
+}
+
+.lista__link{
+
+}
+.lista__link:hover{
+  background: #212121;
+}
+
+.lista__link-texto{
+  color: #fff;
+  text-align: center;
+  min-width: 100px;
+} 
+
+.lista__link-img{
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+}
+
+.lista__link-img img{
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+
+.header__menu.menu--show .lista__link{
+  animation: menu-link-texto 1s forwards;
+}
+ 
+.header__menu.menu--show .lista__link-texto,
+.header__menu.menu--show .lista__link-img{
+  animation: menu-link-icone 2s forwards;
+}
+
+@keyframes menu-link-texto{
+  0%{
+    opacity: 0;
+  }
+  30%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+ 
+@keyframes menu-link-icone{
+  0%{
+    opacity: 0;
+  }
+  30%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

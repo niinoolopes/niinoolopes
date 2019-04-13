@@ -26,3 +26,27 @@ gulp.task('create-app', shell.task(
         `touch "../app/contato.html" `,
     ]
 ));
+
+gulp.task('create-app-php', shell.task(
+    [
+        // FOLDERS
+        `mkdir "../app" `,
+        `mkdir "../app/assets" `,
+        `mkdir "../app/assets/images" `,
+        `mkdir "../app/assets/icons" `,
+        `mkdir "../app/assets/fonts" `,
+        `mkdir "../app/assets/scripts" `,
+        `mkdir "../app/assets/scripts/src" `,
+        `mkdir "../app/assets/styles/scss" `,
+        `mkdir "../app/assets/styles/scss/page" `,
+        // APP
+        `touch "../app/assets/scripts/src/menu.js" `,
+        `touch "../app/assets/styles/scss/init.scss" `,
+        `touch "../app/assets/styles/scss/page/page.scss" `,
+        `touch "../app/assets/styles/scss/page/_header.scss" `,
+        `touch "../app/assets/styles/scss/page/_footer.scss" `,
+        `touch "../app/index.php" `,
+        `touch "../app/sobre.php" `,
+        `touch "../app/contato.php" `,
+    ]
+));

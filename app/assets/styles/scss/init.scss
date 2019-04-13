@@ -1,0 +1,15 @@
+// CONFIG
+@import 'config/reset.scss';
+@import 'config/variables.scss';
+// MIXIN
+@import 'mixin/mixin.scss';
+@import 'mixin/mixin-components.scss';
+// LAYOUT
+@import 'layout/grid.scss';
+// PAGE
+@import 'page/_footer.scss';
+@import 'page/_header.scss';
+@import 'page/_header-menu.scss';
+@import 'page/page.scss';
+@import 'page/home.scss';
+// PAGES

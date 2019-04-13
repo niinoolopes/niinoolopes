@@ -12,7 +12,7 @@ gulp.task('default', () => {
     gulp.start('styles-all')
     gulp.start('scripts-all')
     gulp.start('watch')
-    //gulp.start('server')
+    gulp.start('server')
 })
 
 

@@ -1,8 +1,0 @@
-codigo 
-o codigo html é importante pois é atraves da estrutura e exibição que buscadores como o google faz a leitura do site para a web.
-
-responsivo
-Hoje um site tem de ser respondivo, dados e pesquisas aponta que grande parte de acessos são por dipositivos mobile.
-
-Analistic
-Não basta ter apenas uma pagina na web, precisamos analisar o que o google analytics pode mostrar, com ele podemos monitorar o volume de visitas e interaçõs no site.
